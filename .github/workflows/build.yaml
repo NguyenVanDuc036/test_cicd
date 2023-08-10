@@ -1,0 +1,11 @@
+name: helloworld
+on:
+  push:
+    branches: [master]
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        users: actions/checkout@2
