@@ -1,11 +1,18 @@
-name: helloworld
+name: Node.js CI
+
 on:
   push:
-    branches: [master]
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  docker:
+  build:
+
     runs-on: ubuntu-latest
+
     steps:
-      - name: checkout
-        uses: actions/checkout@2
+    - name: Checkout repository
+      uses: actions/checkout@v2
